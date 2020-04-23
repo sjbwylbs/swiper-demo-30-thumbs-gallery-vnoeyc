@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Swiper demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+
+<body>
+	<div class="swiper-container gallery-thumbs">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<span>Lv1</span><i></i>
+			</div>
+			<div class="swiper-slide">
+				<span>Lv2</span><i></i>
+			</div>
+			<div class="swiper-slide">
+				<span>Lv3</span><i></i>
+			</div>
+			<div class="swiper-slide">
+				<span>Lv4</span><i></i>
+			</div>
+			<div class="swiper-slide">
+				<span>Lv5</span><i></i>
+			</div>
+			<div class="swiper-slide">
+				<span>Lv6</span><i></i>
+			</div>
+			<div class="swiper-slide">
+				<span>Lv7</span><i></i>
+			</div>
+			<div class="swiper-slide">
+				<span>Lv8</span><i></i>
+			</div>
+			<div class="swiper-slide">
+				<span>Lv9</span><i></i>
+			</div>
+			<div class="swiper-slide">
+				<span>Lv10</span><i></i>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-container gallery-top">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">Slide01</div>
+			<div class="swiper-slide">Slide02</div>
+			<div class="swiper-slide">Slide03</div>
+			<div class="swiper-slide">Slide04</div>
+			<div class="swiper-slide">Slide05</div>
+			<div class="swiper-slide">Slide06</div>
+			<div class="swiper-slide">Slide07</div>
+			<div class="swiper-slide">Slide08</div>
+			<div class="swiper-slide">Slide09</div>
+			<div class="swiper-slide">Slide10</div>
+		</div>
+		<!-- Add Arrows -->
+		<div class="swiper-button-next swiper-button-white"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+	</div>
+
+
+
+	<!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var galleryThumbs = new Swiper('.gallery-thumbs', {
+            slidesPerView: 'auto',
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs
+            }
+        });
+	</script>
+</body>
+
+</html>
